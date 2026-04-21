@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'app/base.html' %}
+{%block content %}
+    {% include 'app/navbar.html' %}
     {% for inson in users %}
-        <h1>{{inson.ism}} {{inson.familiya}}</h1>
+        <h1 class="abc">{{inson.ism}} {{inson.familiya}}</h1>
         {% if inson.yosh > 11 %}
-            <p>Siz normal yoshdasiz</p>
+            <p class="abc">Siz normal yoshdasiz</p>
         {%else%}
-            <p>Hali bor</p>
+            <p class="abc">Hali bor</p>
         {%endif%}
     {%endfor%}
-</body>
-</html>
+
+{%endblock%}
+
