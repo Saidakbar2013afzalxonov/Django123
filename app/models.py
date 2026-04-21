@@ -6,6 +6,7 @@ class User(models.Model):
     ism=models.CharField(max_length=50,blank=False)
     familiya=models.CharField(max_length=50,blank=False)
     yosh=models.PositiveIntegerField(default=15,blank=True)
+    picture=models.ImageField(upload_to='images/',default='images/default.jpg',blank=True)
 
     def __str__(self):
         return f"{self.ism} {self.familiya}"
