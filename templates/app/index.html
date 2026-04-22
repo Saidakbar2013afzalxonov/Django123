@@ -1,13 +1,10 @@
+
+
 {% extends 'app/base.html' %}
 {%block content %}
     {% include 'app/navbar.html' %}
-    {% for inson in users %}
-        <h1 class="abc">{{inson.ism}} {{inson.familiya}}</h1>
-        {% if inson.yosh > 11 %}
-            <p class="abc">Siz normal yoshdasiz</p>
-        {%else%}
-            <p class="abc">Hali bor</p>
-        {%endif%}
+    {% for user in users %}
+        <a href="{% url 'user_view' user.id %}"><h1 class="abc">{{user.ism}} {{user.familiya}}</h1></a>
     {%endfor%}
 
 {%endblock%}
