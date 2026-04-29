@@ -8,5 +8,9 @@
         {% endif %}
         <hr>
         <a href="{% url 'user_list' %}">bosh sahifaga qaytish</a>
+        <br>
+        <a href="{% url 'update_user' user.slug %}">Foydalanuvchini yangilash</a>
+        <br>
+        <a href="{% url 'delete_user' user.slug %}">Foydalanuvchini o'chirish</a>
 
 {%endblock%}

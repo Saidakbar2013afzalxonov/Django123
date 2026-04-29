@@ -6,6 +6,8 @@
     {% for user in users %}
         <a href="{% url 'user_view' user.slug %}"><h1 class="abc">{{user.ism}} {{user.familiya}}</h1></a>
     {%endfor%}
+    <br>
+    <div class="ggs"><a href="{% url 'create_user' %}">Foydalanuvchi qo'shish</a></div>
 
 {%endblock%}
 

@@ -1,0 +1,21 @@
+
+{%extends 'app/base.html'}
+{%block content%}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Ism</label>
+        <input name="ism" type="text">
+        <br>
+        <label>familiya</label>
+        <input name="familiya" type="text">
+        <br>
+        <label>yosh</label>
+        <input name="yosh" type="text">
+        <br>
+        <label>Rasm</label>
+        <input name="picture" type="file">
+        <br>
+        
+        <button type="submit">Saqlash</button>
+    </form>
+{%endblock%}

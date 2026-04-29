@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label>Ism</label>
+    <input name="ism" type="text" value="{{ user.ism }}">
+    <br>
+
+    <label>Familiya</label>
+    <input name="familiya" type="text" value="{{ user.familiya }}">
+    <br>
+
+    <label>Yosh</label>
+    <input name="yosh" type="text" value="{{ user.yosh }}">
+    <br>
+
+    <label>Hozirgi rasm:</label><br>
+    <img src="{{ user.picture.url }}" width="200"><br>
+
+    <label>Yangi rasm</label>
+    <input name="picture" type="file">
+    <br>
+
+    <button type="submit">Yangilash</button>
+</form>
+
+{% endblock %}

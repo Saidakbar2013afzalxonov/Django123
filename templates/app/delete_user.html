@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <h2> Rostdan ham {{ user.ism }} {{ user.familiya }} ni o'chirmoqchimisiz? </h2>
+    <button type="submit">Foydalanuvchini o'chirish</button>
+</form>
+
+{% endblock %}
